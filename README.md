@@ -1,3 +1,10 @@
+#Tickets
+
+- Website developed for solving tickets submitted by the users
+
+- **Used Programming Languages:** HTML, CSS, PHP, JavaScript
+
+
 ## Here are some available accounts for each type of user on our website:
 - **Client:** 
   - Email: harry@gmail.com
