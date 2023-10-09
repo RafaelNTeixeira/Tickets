@@ -1,4 +1,4 @@
-#Tickets
+# Tickets
 
 - Website developed for solving tickets submitted by the users
 
