@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    padding-top: 5%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url('https://images.hdqwalls.com/wallpapers/vector-landscape-reflection-mountains-4k-md.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10%;
+    background-color: #141E28;
+    border-bottom: 2px solid white;
+    z-index: 9999
+}
+
+.logo {
+    font-size: 2em;
+    color: white;
+    user-select: none;
+}
+
+.navigation a:nth-child(1),
+.navigation a:nth-child(2),
+.navigation a:nth-child(3),
+.navigation a:nth-child(4) {
+    position: relative;
+    font-size: 1.1em;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+nav.navigation {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navigation a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: white;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+
+.navigation a:hover::after {
+    transform: scaleX(1);
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box a {
+    text-decoration: none;
+    color: white;
+}
+
+.btn {
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+    width: 250px;
+    cursor: pointer;
+}
+
+.btn-content {
+    color: #FFF;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.btn-content span {
+    transition: all 0.3s;
+}
+  
+.btn-content::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: rgba(255,255,255,0.5);
+    border-bottom-color: rgba(255,255,255,0.5);
+    transform: scale(0.1, 1);
+  }
+  
+.btn-content:hover span {
+    letter-spacing: 2px;
+}
+
+.btn-content:hover::before {
+    opacity: 1; 
+    transform: scale(1, 1); 
+}
+
+.btn-content::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.3s;
+    background-color: rgba(255,255,255,0.1);
+}
+.btn-content:hover::after {
+    opacity: 0; 
+    transform: scale(0.1, 1);
+}
+
+.tickets-list {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: 90%;
+}
+
+
+ul {
+    list-style-type: none;
+    justify-content: center;
+    flex-direction: column;
+}
+
+li {
+    border: 1px solid white;
+    border-radius: 20px;
+   
+    padding: 50px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    flex-direction: column;
+    text-align: left;
+}
+
+.box-3 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-three {
+    color: #FFF;
+    transition: all 0.5s;
+    position: relative;
+}
+
+.btn-three::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(255,255,255,0.1);
+    transition: all 0.3s;
+}
+
+.btn-three:hover::before {
+    opacity: 0 ;
+    transform: scale(0.5,0.5);
+}
+
+.btn-three::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border: 1px solid rgba(255,255,255,0.5);
+    transform: scale(1.2,1.2);
+}
+
+.btn-three:hover::after {
+    opacity: 1;
+    transform: scale(1,1);
+}
+
+.box-3 a {
+    text-decoration: none;
+}
+
+@media (max-width: 700px) {
+    header {
+        padding: 30px;
+    }
+}

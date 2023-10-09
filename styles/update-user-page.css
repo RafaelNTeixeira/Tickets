@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    flex-direction: column;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url('https://images.hdqwalls.com/wallpapers/vector-landscape-reflection-mountains-4k-md.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10%;
+    background-color: #141E28;
+    border-bottom: 2px solid white;
+    z-index: 9999
+}
+
+.logo {
+    font-size: 2em;
+    color: white;
+    user-select: none;
+}
+
+.navigation a:nth-child(1),
+.navigation a:nth-child(2),
+.navigation a:nth-child(3),
+.navigation a:nth-child(4) {
+    position: relative;
+    font-size: 1.1em;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+nav.navigation {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navigation a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: white;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: 0.5s;
+}
+
+.navigation a:hover::after {
+    transform: scaleX(1);
+}
+
+form {
+    margin-top: 8%;
+    width: 90%;
+    max-width: 600px;
+}
+
+.input-group {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border: 1px solid white;
+    color: white;
+    background: transparent;
+    font-size: 1em;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border: 1px solid white;
+    font-size: 1em;
+    color: white;
+    background: transparent;
+}
+
+option {
+    background-color: #141E28;
+}
+
+label {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    color: white;
+    cursor: text;
+    transition: all 0.4s;
+}
+
+.input-group input:focus~label,
+.input-group input:valid~label,
+textarea:focus~label,
+textarea:valid~label {
+    top: -35px;
+    font-size: 0.9em;
+    background: transparent;
+}
+
+.icons {
+    transform: translateY(3px);
+}
+
+textarea::placeholder {
+    color: whitesmoke;
+    opacity: 1;
+}
+  
+.wrapper{
+    top: 50%;
+    left: 50%;
+}
+  
+.link_wrapper{
+    position: relative;
+}
+  
+.link_wrapper a{
+    display: block;
+    width: 250px;
+    height: 50px;
+    line-height: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    background: #141E28;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    border: 3px solid #141E28;
+    transition: all .35s;
+}
+  
+.button-icon{
+    width: 50px;
+    height: 50px;
+    border: 3px solid transparent;
+    position: absolute;
+    transform: rotate(45deg);
+    right: 0;
+    top: 0;
+    z-index: -1;
+    transition: all .35s;
+}
+  
+.button-icon svg{
+    width: 30px;
+    position: absolute;
+    top: calc(50% - 15px);
+    left: calc(50% - 15px);
+    transform: rotate(-45deg);
+    fill: #141E28;
+    transition: all .35s;
+}
+
+.link_wrapper span {
+    letter-spacing: 7px;
+    transition: all 0.35s;
+}
+
+.link_wrapper:hover span {
+    color: #141E28;
+    letter-spacing: 10px;
+    font-weight: bold;
+}
+  
+.link_wrapper a:hover{
+    width: 200px;
+    border: 3px solid white;
+    background: white;
+}
+  
+.link_wrapper a:hover + .button-icon{
+    border: 3px solid #141E28;
+    right: -25%;
+}
+
+.btn {
+    background-color: white;
+    border-radius: 5px;
+    font-size: 1.2em;
+    color: black;
+    border: 2px solid white;
+    display: block;
+    margin: 0 auto;
+    padding: 10px 30px;
+    transition: 0.4s;
+}
+
+.btn:hover {
+    background-color: #141E28;
+    color: white;
+  }
