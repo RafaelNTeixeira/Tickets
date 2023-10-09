@@ -18,16 +18,6 @@
 - **In templates/index.tpl.php, line 92:**
   - Replace with: ```<a href="pages/Ongoing-page.php">Ongoing</a>```
   
-
-## Project elaborated by:
-- **Bruno Duvane: up202109244** 
-
-
-- **Rafael Teixeira:up202108831**
-
-
-- **João Duarte:up201504089**
-
 ## To execute simply do php -S localhost:9000
 
 
